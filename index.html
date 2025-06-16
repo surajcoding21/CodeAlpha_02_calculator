@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced Calculator with Sound</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="calculator">
+    <input type="text" id="display" readonly placeholder="0">
+    <div class="buttons">
+      <button onclick="playSound(); clearEntry()">CE</button>
+      <button onclick="playSound(); clearDisplay()">C</button>
+      <button onclick="playSound(); calculateFunction('sqrt')">√</button>
+      <button onclick="playSound(); appendValue('/')">/</button>
+
+      <button onclick="playSound(); appendValue('7')">7</button>
+      <button onclick="playSound(); appendValue('8')">8</button>
+      <button onclick="playSound(); appendValue('9')">9</button>
+      <button onclick="playSound(); appendValue('*')">*</button>
+
+      <button onclick="playSound(); appendValue('4')">4</button>
+      <button onclick="playSound(); appendValue('5')">5</button>
+      <button onclick="playSound(); appendValue('6')">6</button>
+      <button onclick="playSound(); appendValue('-')">-</button>
+
+      <button onclick="playSound(); appendValue('1')">1</button>
+      <button onclick="playSound(); appendValue('2')">2</button>
+      <button onclick="playSound(); appendValue('3')">3</button>
+      <button onclick="playSound(); appendValue('+')">+</button>
+
+      <button onclick="playSound(); calculateFunction('sin')">sin</button>
+      <button onclick="playSound(); appendValue('0')">0</button>
+      <button onclick="playSound(); calculate()">=</button>
+      <button onclick="playSound(); calculateFunction('cos')">cos</button>
+
+      <button onclick="playSound(); calculateFunction('tan')">tan</button>
+      <button onclick="playSound(); calculateFunction('log')">log</button>
+      <button onclick="playSound(); appendValue('.')">.</button>
+    </div>
+  </div>
+
+  <div class="history">
+    <h3>History</h3>
+    <ul id="historyList"></ul>
+  </div>
+
+  <!-- Audio file for click sound -->
+  <audio id="clickSound" src="click.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
